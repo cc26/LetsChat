@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name ="roomName" content ="{{roomName}}">
+	<script type="text/javascript" src="/public/client.js"></script>
+    <link rel="stylesheet" href="/public/room.css" type="text/css" />
+
+	<title>Room:{{roomName}}</title>
+	<body>
+		<h1>Room:{{roomName}}</h1>
+		<span id="user">User:</span> 
+		<div id="chats_container"></div>
+
+		<form method= "post" action="/{{roomName}}/messages" id="messageForm">
+			<input type= "text" name ="message" id="messageField" >
+			<input type= "hidden" name="nickname" id="nicknameField" value="">
+			<input type= "submit" value="Send" id="submitbutton">
+		</form>
+
+	</body>
+
+</html>
